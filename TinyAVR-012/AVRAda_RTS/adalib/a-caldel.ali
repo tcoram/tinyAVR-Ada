@@ -1,0 +1,78 @@
+V "GNAT Lib v15"
+A -nostdinc
+A -Og
+A -gnatA
+A --RTS=/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/
+A -fverbose-asm
+A -gnateDMCU=attiny1616
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -gdwarf-2
+A -gnatg
+A -mdouble=32
+A -mlong-double=64
+A -mmcu=avrxmega3
+A -mn-flash=1
+A -mno-skip-bug
+P ZX
+
+RN
+RR SIMPLE_BARRIERS
+RV NO_CALENDAR
+RV NO_DELAY
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_ENUMERATION_MAPS
+RR NO_ENTRY_CALLS_IN_ELABORATION_CODE
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RV NO_FIXED_POINT
+RR NO_IO
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_REENTRANCY
+RR NO_SELECT_STATEMENTS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_TERMINATION
+RR NO_TASKING
+RR STATIC_PRIORITIES
+RR STATIC_STORAGE_SIZE
+RR IMMEDIATE_RECLAMATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_WIDE_CHARACTERS
+RR MAX_ENTRY_QUEUE_LENGTH=1
+
+U ada.calendar.delays%s	a-caldel.ads		051ce635 NE OL PK
+W ada.calendar%s	a-calend.ads		a-calend.ali
+W interfaces%s		interfac.ads		interfac.ali
+
+D ada.ads		20251005145017 76789da1 ada%s
+D a-calend.ads		20251005145017 2c38618b ada.calendar%s
+D a-caldel.ads		20251005145017 c4c8afe1 ada.calendar.delays%s
+D interfac.ads		20251005145017 edec285f interfaces%s
+D system.ads		20251005145017 aa8617de system%s
+D /home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat.adc  20251005145017 00000000
+G a e
+G c Z s s [delay_for ada__calendar__delays 54 14 none]
+G c Z s s [delay_until ada__calendar__delays 57 14 none]
+G c Z s s [timeIP ada__calendar__delays 49 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 3|39r9 63r5
+X 2 a-calend.ads
+15K13*Calendar 1|16k9 2|18e17 3|39r13 63r9
+X 3 a-caldel.ads
+39K22*Delays 2|15k13 3|61E35 63l18 63e24
+44I12*Day_Count{4|49I9} 50r14
+49R9*Time 52e14 57r31
+50i7*Days{44I12}
+51o7*Secs{duration}
+54U14*Delay_For 54>25 61b<ada,ada__calendar__delays__delay_for>24
+54o25 D{duration}
+57U14*Delay_Until 57>27 62b<ada,ada__calendar__delays__delay_until>24
+57r27 T{49R9}
+X 4 interfac.ads
+38K9*Interfaces 3|38w6 44r25 4|231e15
+49I9*Integer_16<short_integer> 3|44r36
+

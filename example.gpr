@@ -1,0 +1,34 @@
+with "./TinyAVR-012/AVRAda_RTS/avrada_rts.gpr";
+with "./TinyAVR-012/AVRAda_RTS/avr_tool_options.gpr";
+
+project example is
+
+   for Target use "avr";
+   for Runtime ("Ada") use "./TinyAVR-012/AVRAda_RTS/";	
+     
+   for Languages use ("Ada");
+   for Source_Dirs use ("./TinyAVR-012/AVRAda_Lib/**","./TinyAVR-012/AVRAda_MCU/**", "src/**");
+   for Object_Dir use "obj";	
+   for Create_Missing_Dirs use "True";
+
+   
+   for Exec_Dir use ".";
+   for Main use ("example");
+   
+   package Builder renames AVR_Tool_Options.Builder;
+            Build_Switches := ("-O2", "-gnatp", "-gnateb");
+   package Compiler is
+      for Default_Switches ("Asm_CPP") use ("-mmcu=" & AVR_Tool_Options.MCU) & AVR_Tool_Options.ASMFLAGS;
+      for Default_Switches ("Ada") use        
+        Build_Switches & AVR_Tool_Options.ALL_ADAFLAGS;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use AVR_Tool_Options.Binder_Switches;
+   end Binder;
+   
+   package Linker is
+      for Switches ("Ada") use AVR_Tool_Options.Linker_Switches &  "-Llib";
+   end Linker;
+
+end example;

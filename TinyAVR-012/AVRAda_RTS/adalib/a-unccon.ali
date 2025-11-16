@@ -1,0 +1,59 @@
+V "GNAT Lib v15"
+A -nostdinc
+A -Og
+A -gnatA
+A --RTS=/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/
+A -fverbose-asm
+A -gnateDMCU=attiny1616
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -gdwarf-2
+A -gnatg
+A -mdouble=32
+A -mlong-double=64
+A -mmcu=avrxmega3
+A -mn-flash=1
+A -mno-skip-bug
+P ZX
+
+RN
+RR SIMPLE_BARRIERS
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_ENUMERATION_MAPS
+RR NO_ENTRY_CALLS_IN_ELABORATION_CODE
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IO
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_REENTRANCY
+RR NO_SELECT_STATEMENTS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_TERMINATION
+RR NO_TASKING
+RR STATIC_PRIORITIES
+RR STATIC_STORAGE_SIZE
+RR IMMEDIATE_RECLAMATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_WIDE_CHARACTERS
+RR MAX_ENTRY_QUEUE_LENGTH=1
+
+U ada.unchecked_conversion%s  a-unccon.ads	8f9312a7 NE OL PU GE
+W ada%s			ada.ads			ada.ali
+
+D ada.ads		20251005145017 76789da1 ada%s
+D a-unccon.ads		20251005145017 f9eb8f06 ada.unchecked_conversion%s
+D system.ads		20251005145017 aa8617de system%s
+D /home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat.adc  20251005145017 00000000
+G a e
+X 1 ada.ads
+16K9*Ada 20e8 2|20r10
+X 2 a-unccon.ads
+17+9 Source 20r40
+18+9 Target 20r55
+20v14*Unchecked_Conversion 20>36 22r14 23b27
+20*36 S{17+9}
+

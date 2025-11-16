@@ -1,0 +1,179 @@
+V "GNAT Lib v15"
+A -nostdinc
+A -Og
+A -gnatA
+A --RTS=/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/
+A -fverbose-asm
+A -gnateDMCU=attiny1616
+A -fcallgraph-info=su,da
+A -ffunction-sections
+A -fdata-sections
+A -gdwarf-2
+A -gnatg
+A -mdouble=32
+A -mlong-double=64
+A -mmcu=avrxmega3
+A -mn-flash=1
+A -mno-skip-bug
+P ZX
+
+RN
+RR SIMPLE_BARRIERS
+RR NO_DYNAMIC_ATTACHMENT
+RR NO_ENUMERATION_MAPS
+RR NO_ENTRY_CALLS_IN_ELABORATION_CODE
+RR NO_EXCEPTION_PROPAGATION
+RR NO_FINALIZATION
+RR NO_IO
+RR NO_IMPLICIT_HEAP_ALLOCATIONS
+RR NO_LOCAL_PROTECTED_OBJECTS
+RV NO_LONG_LONG_INTEGERS
+RR NO_PROTECTED_TYPE_ALLOCATORS
+RR NO_REENTRANCY
+RR NO_SELECT_STATEMENTS
+RR NO_TASK_ATTRIBUTES_PACKAGE
+RR NO_TASK_TERMINATION
+RR NO_TASKING
+RR STATIC_PRIORITIES
+RR STATIC_STORAGE_SIZE
+RR IMMEDIATE_RECLAMATION
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RR NO_WIDE_CHARACTERS
+RR MAX_ENTRY_QUEUE_LENGTH=1
+
+U system.unsigned_types%s  s-unstyp.ads		ccc65c3d NE OL PU PK
+W system%s		system.ads		system.ali
+
+D system.ads		20251005145017 aa8617de system%s
+D s-unstyp.ads		20251005145017 66404be3 system.unsigned_types%s
+D /home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat.adc  20251005145017 00000000
+G a e
+G c Z s s [shift_left system__unsigned_types 94 13 none]
+G c Z s s [shift_right system__unsigned_types 98 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 102 13 none]
+G c Z s s [rotate_left system__unsigned_types 106 13 none]
+G c Z s s [rotate_right system__unsigned_types 110 13 none]
+G c Z s s [shift_left system__unsigned_types 114 13 none]
+G c Z s s [shift_right system__unsigned_types 118 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 122 13 none]
+G c Z s s [rotate_left system__unsigned_types 126 13 none]
+G c Z s s [rotate_right system__unsigned_types 130 13 none]
+G c Z s s [shift_left system__unsigned_types 134 13 none]
+G c Z s s [shift_right system__unsigned_types 138 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 142 13 none]
+G c Z s s [rotate_left system__unsigned_types 146 13 none]
+G c Z s s [rotate_right system__unsigned_types 150 13 none]
+G c Z s s [shift_left system__unsigned_types 154 13 none]
+G c Z s s [shift_right system__unsigned_types 158 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 162 13 none]
+G c Z s s [rotate_left system__unsigned_types 166 13 none]
+G c Z s s [rotate_right system__unsigned_types 170 13 none]
+G c Z s s [shift_left system__unsigned_types 174 13 none]
+G c Z s s [shift_right system__unsigned_types 178 13 none]
+G c Z s s [shift_right_arithmetic system__unsigned_types 182 13 none]
+G c Z s s [rotate_left system__unsigned_types 186 13 none]
+G c Z s s [rotate_right system__unsigned_types 190 13 none]
+G c Z s s [packed_bytes1IP system__unsigned_types 56 9 none]
+G c Z s s [packed_bytes2IP system__unsigned_types 65 9 none]
+G c Z s s [packed_bytes4IP system__unsigned_types 76 9 none]
+X 1 system.ads
+60K9*System 229e11 2|40r9 200r5
+X 2 s-unstyp.ads
+40K16*Unsigned_Types 1|60k9 2|200l12 200e26
+43M9*Short_Short_Unsigned 95r16 96r32 99r16 100r32 103r16 104r32 107r16 108r32
+. 111r16 112r32
+44M9*Short_Unsigned 115r16 116r32 119r16 120r32 123r16 124r32 127r16 128r32
+. 131r16 132r32
+45M9*Unsigned 135r16 136r32 139r16 140r32 143r16 144r32 147r16 148r32 151r16
+. 152r32
+46M9*Long_Unsigned 155r16 156r32 159r16 160r32 163r16 164r32 167r16 168r32
+. 171r16 172r32
+47M9*Long_Long_Unsigned 175r16 176r32 179r16 180r32 183r16 184r32 187r16
+. 188r32 191r16 192r32
+49M9*Float_Unsigned
+52M9*Packed_Byte 53r8 56r54 58r41
+56A9*Packed_Bytes1(52M9)<integer> 57r8 58r8 65r30 76r30
+65A9*Packed_Bytes2<56A9>(52M9)<integer> 67r8
+76A9*Packed_Bytes4<56A9>(52M9)<integer> 77r8 91r23
+86M9*Bits_1
+87M9*Bits_2
+88M9*Bits_4
+91A12*Bytes_F{76A9}(52M9)<integer>
+94V13*Shift_Left{43M9} 95>7 96>7 194b30
+95m7 Value{43M9}
+96i7 Amount{natural}
+98V13*Shift_Right{43M9} 99>7 100>7 195b30
+99m7 Value{43M9}
+100i7 Amount{natural}
+102V13*Shift_Right_Arithmetic{43M9} 103>7 104>7 196b30
+103m7 Value{43M9}
+104i7 Amount{natural}
+106V13*Rotate_Left{43M9} 107>7 108>7 197b30
+107m7 Value{43M9}
+108i7 Amount{natural}
+110V13*Rotate_Right{43M9} 111>7 112>7 198b30
+111m7 Value{43M9}
+112i7 Amount{natural}
+114V13*Shift_Left{44M9} 115>7 116>7 194b30
+115m7 Value{44M9}
+116i7 Amount{natural}
+118V13*Shift_Right{44M9} 119>7 120>7 195b30
+119m7 Value{44M9}
+120i7 Amount{natural}
+122V13*Shift_Right_Arithmetic{44M9} 123>7 124>7 196b30
+123m7 Value{44M9}
+124i7 Amount{natural}
+126V13*Rotate_Left{44M9} 127>7 128>7 197b30
+127m7 Value{44M9}
+128i7 Amount{natural}
+130V13*Rotate_Right{44M9} 131>7 132>7 198b30
+131m7 Value{44M9}
+132i7 Amount{natural}
+134V13*Shift_Left{45M9} 135>7 136>7 194b30
+135m7 Value{45M9}
+136i7 Amount{natural}
+138V13*Shift_Right{45M9} 139>7 140>7 195b30
+139m7 Value{45M9}
+140i7 Amount{natural}
+142V13*Shift_Right_Arithmetic{45M9} 143>7 144>7 196b30
+143m7 Value{45M9}
+144i7 Amount{natural}
+146V13*Rotate_Left{45M9} 147>7 148>7 197b30
+147m7 Value{45M9}
+148i7 Amount{natural}
+150V13*Rotate_Right{45M9} 151>7 152>7 198b30
+151m7 Value{45M9}
+152i7 Amount{natural}
+154V13*Shift_Left{46M9} 155>7 156>7 194b30
+155m7 Value{46M9}
+156i7 Amount{natural}
+158V13*Shift_Right{46M9} 159>7 160>7 195b30
+159m7 Value{46M9}
+160i7 Amount{natural}
+162V13*Shift_Right_Arithmetic{46M9} 163>7 164>7 196b30
+163m7 Value{46M9}
+164i7 Amount{natural}
+166V13*Rotate_Left{46M9} 167>7 168>7 197b30
+167m7 Value{46M9}
+168i7 Amount{natural}
+170V13*Rotate_Right{46M9} 171>7 172>7 198b30
+171m7 Value{46M9}
+172i7 Amount{natural}
+174V13*Shift_Left{47M9} 175>7 176>7 194b30
+175m7 Value{47M9}
+176i7 Amount{natural}
+178V13*Shift_Right{47M9} 179>7 180>7 195b30
+179m7 Value{47M9}
+180i7 Amount{natural}
+182V13*Shift_Right_Arithmetic{47M9} 183>7 184>7 196b30
+183m7 Value{47M9}
+184i7 Amount{natural}
+186V13*Rotate_Left{47M9} 187>7 188>7 197b30
+187m7 Value{47M9}
+188i7 Amount{natural}
+190V13*Rotate_Right{47M9} 191>7 192>7 198b30
+191m7 Value{47M9}
+192i7 Amount{natural}
+

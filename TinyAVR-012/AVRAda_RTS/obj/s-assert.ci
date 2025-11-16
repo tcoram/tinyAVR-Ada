@@ -1,0 +1,5 @@
+graph: { title: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-assert.adb"
+node: { title: "system__assertions__raise_assert_failure" label: "Raise_Assert_Failure\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-assert.adb:40:4\n2 bytes (static)\n0 dynamic objects" }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:52:14" shape : ellipse }
+edge: { sourcename: "system__assertions__raise_assert_failure" targetname: "__gnat_last_chance_handler" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-assert.adb:42:7" }
+}

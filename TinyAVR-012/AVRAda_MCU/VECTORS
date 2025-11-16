@@ -1,0 +1,108 @@
+   --
+   -- interrupts
+   --
+   Number_Of_Interrupts     : constant := 34;
+
+   -- [CRCSCAN_NMI]
+   Sig_CRCSCAN_NMI          : constant        :=  1;
+   Sig_CRCSCAN_NMI_String   : constant String := "__vector_1";
+   -- [BOD_VLM]
+   Sig_BOD_VLM              : constant        :=  2;
+   Sig_BOD_VLM_String       : constant String := "__vector_2";
+   -- [PORTA_PORT]
+   Sig_PORTA_PORT           : constant        :=  3;
+   Sig_PORTA_PORT_String    : constant String := "__vector_3";
+   -- [PORTB_PORT]
+   Sig_PORTB_PORT           : constant        :=  4;
+   Sig_PORTB_PORT_String    : constant String := "__vector_4";
+   -- [PORTC_PORT]
+   Sig_PORTC_PORT           : constant        :=  5;
+   Sig_PORTC_PORT_String    : constant String := "__vector_5";
+   -- [RTC_CNT]
+   Sig_RTC_CNT              : constant        :=  6;
+   Sig_RTC_CNT_String       : constant String := "__vector_6";
+   -- [RTC_PIT]
+   Sig_RTC_PIT              : constant        :=  7;
+   Sig_RTC_PIT_String       : constant String := "__vector_7";
+   -- [TCA0_LUNF]
+   Sig_TCA0_LUNF            : constant        :=  8;
+   Sig_TCA0_LUNF_String     : constant String := "__vector_8";
+   -- [TCA0_OVF]
+   Sig_TCA0_OVF             : constant        :=  8;
+   Sig_TCA0_OVF_String      : constant String := "__vector_8";
+   -- [TCA0_HUNF]
+   Sig_TCA0_HUNF            : constant        :=  9;
+   Sig_TCA0_HUNF_String     : constant String := "__vector_9";
+   -- [TCA0_CMP0]
+   Sig_TCA0_CMP0            : constant        := 10;
+   Sig_TCA0_CMP0_String     : constant String := "__vector_10";
+   -- [TCA0_LCMP0]
+   Sig_TCA0_LCMP0           : constant        := 10;
+   Sig_TCA0_LCMP0_String    : constant String := "__vector_10";
+   -- [TCA0_CMP1]
+   Sig_TCA0_CMP1            : constant        := 11;
+   Sig_TCA0_CMP1_String     : constant String := "__vector_11";
+   -- [TCA0_LCMP1]
+   Sig_TCA0_LCMP1           : constant        := 11;
+   Sig_TCA0_LCMP1_String    : constant String := "__vector_11";
+   -- [TCA0_CMP2]
+   Sig_TCA0_CMP2            : constant        := 12;
+   Sig_TCA0_CMP2_String     : constant String := "__vector_12";
+   -- [TCA0_LCMP2]
+   Sig_TCA0_LCMP2           : constant        := 12;
+   Sig_TCA0_LCMP2_String    : constant String := "__vector_12";
+   -- [TCB0_INT]
+   Sig_TCB0_INT             : constant        := 13;
+   Sig_TCB0_INT_String      : constant String := "__vector_13";
+   -- [TCB1_INT]
+   Sig_TCB1_INT             : constant        := 14;
+   Sig_TCB1_INT_String      : constant String := "__vector_14";
+   -- [TCD0_OVF]
+   Sig_TCD0_OVF             : constant        := 15;
+   Sig_TCD0_OVF_String      : constant String := "__vector_15";
+   -- [TCD0_TRIG]
+   Sig_TCD0_TRIG            : constant        := 16;
+   Sig_TCD0_TRIG_String     : constant String := "__vector_16";
+   -- [AC0_AC]
+   Sig_AC0_AC               : constant        := 17;
+   Sig_AC0_AC_String        : constant String := "__vector_17";
+   -- [AC1_AC]
+   Sig_AC1_AC               : constant        := 18;
+   Sig_AC1_AC_String        : constant String := "__vector_18";
+   -- [AC2_AC]
+   Sig_AC2_AC               : constant        := 19;
+   Sig_AC2_AC_String        : constant String := "__vector_19";
+   -- [ADC0_RESRDY]
+   Sig_ADC0_RESRDY          : constant        := 20;
+   Sig_ADC0_RESRDY_String   : constant String := "__vector_20";
+   -- [ADC0_WCOMP]
+   Sig_ADC0_WCOMP           : constant        := 21;
+   Sig_ADC0_WCOMP_String    : constant String := "__vector_21";
+   -- [ADC1_RESRDY]
+   Sig_ADC1_RESRDY          : constant        := 22;
+   Sig_ADC1_RESRDY_String   : constant String := "__vector_22";
+   -- [ADC1_WCOMP]
+   Sig_ADC1_WCOMP           : constant        := 23;
+   Sig_ADC1_WCOMP_String    : constant String := "__vector_23";
+   -- [TWI0_TWIS]
+   Sig_TWI0_TWIS            : constant        := 24;
+   Sig_TWI0_TWIS_String     : constant String := "__vector_24";
+   -- [TWI0_TWIM]
+   Sig_TWI0_TWIM            : constant        := 25;
+   Sig_TWI0_TWIM_String     : constant String := "__vector_25";
+   -- [SPI0_INT]
+   Sig_SPI0_INT             : constant        := 26;
+   Sig_SPI0_INT_String      : constant String := "__vector_26";
+   -- [USART0_RXC]
+   Sig_USART0_RXC           : constant        := 27;
+   Sig_USART0_RXC_String    : constant String := "__vector_27";
+   -- [USART0_DRE]
+   Sig_USART0_DRE           : constant        := 28;
+   Sig_USART0_DRE_String    : constant String := "__vector_28";
+   -- [USART0_TXC]
+   Sig_USART0_TXC           : constant        := 29;
+   Sig_USART0_TXC_String    : constant String := "__vector_29";
+   -- [NVMCTRL_EE]
+   Sig_NVMCTRL_EE           : constant        := 30;
+   Sig_NVMCTRL_EE_String    : constant String := "__vector_30";
+

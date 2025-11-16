@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ ! $(uname) = "Darwin" ] ; then
+   DEV="-P usb/hiddev0"
+fi
+
+avrdude -cpkobn_updi -pt$MCU $DEV

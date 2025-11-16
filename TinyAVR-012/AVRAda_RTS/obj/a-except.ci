@@ -1,0 +1,5 @@
+graph: { title: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb"
+node: { title: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:__gnat_last_chance_handler" label: "Default_Handler\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:45:4\n2 bytes (static)\n0 dynamic objects" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:__gnat_last_chance_handler" targetname: "__indirect_call" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:49:7" }
+}

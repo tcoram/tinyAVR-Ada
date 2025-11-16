@@ -1,0 +1,11 @@
+graph: { title: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb"
+node: { title: "__gnat_malloc" label: "Alloc\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb:53:4\n2 bytes (static)\n0 dynamic objects" }
+node: { title: "__gnat_last_chance_handler" label: "Last_Chance_Handler\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:52:14" shape : ellipse }
+edge: { sourcename: "__gnat_malloc" targetname: "__gnat_last_chance_handler" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:59:7" }
+node: { title: "malloc" label: "Avr_Libc_Malloc\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb:40:13" shape : ellipse }
+edge: { sourcename: "__gnat_malloc" targetname: "malloc" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb:71:17" }
+edge: { sourcename: "__gnat_malloc" targetname: "__gnat_last_chance_handler" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/a-except.adb:59:7" }
+node: { title: "__gnat_free" label: "Free\n/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb:80:4\n2 bytes (static)\n0 dynamic objects" }
+node: { title: "free" label: "builtin_free\n<built-in>" shape : ellipse }
+edge: { sourcename: "__gnat_free" targetname: "free" label: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-memory.adb:82:7" }
+}

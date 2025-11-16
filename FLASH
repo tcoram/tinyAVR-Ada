@@ -1,0 +1,13 @@
+#!/bin/bash
+MCU=3217
+
+if [ "$1" = "" ] ; then
+   echo "Usage: FLASH base"
+   exit 1
+fi	
+if [ ! $(uname) = "Darwin" ] ; then
+   DEV="-P usb/hiddev0"
+fi
+ 
+echo gprbuild $1.gpr '&&' avrdude -cpkobn_updi -B 1Mhz -pt$MCU $DEV   -U flash:w:$1.elf
+gprbuild $1.gpr && avrdude -cpkobn_updi -B 1Mhz -pt$MCU $DEV  -U flash:w:$1.elf
