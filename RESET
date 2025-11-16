@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ ! $(uname) = "Darwin" ] ; then
    DEV="-P usb/hiddev0"
 fi
