@@ -1,3 +1,0 @@
-graph: { title: "/home/todd/src/panoptes5.a/tinyAVR-Ada/TinyAVR-012/AVRAda_RTS/gnat/s-stalib.ads"
-node: { title: "system__standard_library__exception_dataIP" label: "exception_dataIP\n<built-in>\n2 bytes (static)\n0 dynamic objects" }
-}
