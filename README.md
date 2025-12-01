@@ -8,9 +8,18 @@ You'll need
 
 I've used the gprbuild and gnat compiler from: https://github.com/alire-project/GNAT-FSF-builds/releases/ and Rolf Ebert's AVR-Ada foundation from https://sourceforge.net/projects/avr-ada/
 
-I've dramatically modified the AVRAda project/config files and removed Alire depedency
-(mainly because I use plain old gprbuild development at my day job).
 
+I've dramatically modified the AVRAda project/config files and removed Alire dependency
+for now (mainly because I use plain old gprbuild development at my day job).
 
+I cherry picked files from AVRAda, licenses retained, but I've changed and added too much to consider forking the original code.
+
+Here are the original AVRAda projects:
+
+https://github.com/RREE/AVRAda_RTS
+
+https://github.com/RREE/AVRAda_MCU
+
+https://github.com/RREE/AVRAda_Lib
 
 
