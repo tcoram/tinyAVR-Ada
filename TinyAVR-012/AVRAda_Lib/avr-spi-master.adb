@@ -2,15 +2,16 @@ package body AVR.SPI.Master is
 
     procedure Startup (Clock_Divisor :     in      Clock_Divisor_Type;
 		       Clock_Mode :        in      Clock_Mode_Type;
-		       Double_Clock :      in      Boolean := False;
+		       Double_Clock :      in      Boolean := True;
 		       MSB_First :         in      Boolean := True) is    -- LSB or MSB First
 	Cm : Unsigned_8;
     begin
-	MCU.SPI0_CTRLA := MCU.SPI_ENABLE_Bm or 
+	MCU.SPI0_CTRLA := 
 	  (if not MSB_First then MCU.SPI_DORD_Bm else 0) or
 	  Clock_Divisor_Type'Enum_rep(clock_divisor) or MCU.SPI_MASTER_Bm or 
 	  (if Double_Clock then MCU.SPI_CLK2x_Bm else 0);
-      case Clock_Mode is
+        
+        case Clock_Mode is
 	  when Sample_Rising_Setup_Falling =>
 	      Cm := 0;
 	  when Setup_Rising_Sample_Falling =>
@@ -19,8 +20,9 @@ package body AVR.SPI.Master is
 	      Cm := 2;
 	  when Setup_Falling_Sample_Rising =>
 	      Cm := 3;
-      end case;
-      MCU.SPI0_CTRLB := MCU.SPI0_CTRLB or Cm or MCU.SPI_SSD_Bm;
+        end case;
+        MCU.SPI0_CTRLB := MCU.SPI0_CTRLB or Cm or MCU.SPI_SSD_Bm;
+        MCU.SPI0_CTRLA := MCU.SPI0_CTRLA or MCU.SPI_ENABLE_Bm;
    end;
 
    procedure Write (Data: Unsigned_8) is 
