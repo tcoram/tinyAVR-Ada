@@ -39,7 +39,7 @@ abstract project Avrada_Rts_Config is
    Clock_Frequency_Last := "9223372036854775807";
    Clock_Frequency := "8000000";
 
-   AVR_MCU := "attiny1616";
+   AVR_MCU := "attiny3217";
 
    Sec_Stack_Size_First := "0";
    Sec_Stack_Size_Last := "1024";

@@ -6,7 +6,7 @@ project example is
    for Target use "avr";
    for Runtime ("Ada") use "./TinyAVR-012/AVRAda_RTS/";	
      
-   for Languages use ("Ada");
+   for Languages use ("Ada", "C");
    for Source_Dirs use ("./TinyAVR-012/AVRAda_Lib/**","./TinyAVR-012/AVRAda_MCU/**", "src/**");
    for Object_Dir use "obj";	
    for Create_Missing_Dirs use "True";
@@ -18,6 +18,7 @@ project example is
    package Builder renames AVR_Tool_Options.Builder;
             Build_Switches := ("-O2", "-gnatp", "-gnateb");
    package Compiler is
+      for Default_Switches ("c") use ("-mmcu=" & AVR_Tool_Options.MCU) & AVR_Tool_Options.ASMFLAGS;
       for Default_Switches ("Asm_CPP") use ("-mmcu=" & AVR_Tool_Options.MCU) & AVR_Tool_Options.ASMFLAGS;
       for Default_Switches ("Ada") use        
         Build_Switches & AVR_Tool_Options.ALL_ADAFLAGS;

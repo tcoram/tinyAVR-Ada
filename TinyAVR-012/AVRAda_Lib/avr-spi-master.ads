@@ -14,7 +14,7 @@ package AVR.SPI.Master is
      );
 
     procedure Write (Data: Unsigned_8);
-    Pragmas Inline (Write);
-    function Read_Write (Data : Unsigned_8) return Usigned_8;
-    Pragmas Inline (Read_Write);
+    pragma Inline (Write);
+    function Read_Write (Data : Unsigned_8) return Unsigned_8;
+    pragma Inline (Read_Write);
 end;
