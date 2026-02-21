@@ -6,7 +6,7 @@ package Avrada_Rts_Config is
 
    Clock_Frequency_First : constant :=  0;
    Clock_Frequency_Last : constant :=  9223372036854775807;
-   Clock_Frequency : constant :=  8_000_000;
+   Clock_Frequency : constant :=  10_000_000;
 
    AVR_MCU : constant String := "attiny3217";
 

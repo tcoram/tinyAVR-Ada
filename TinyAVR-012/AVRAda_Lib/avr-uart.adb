@@ -4,6 +4,7 @@ with AVRAda_Rts_Config;
 
 package body AVR.UART is
     Clock_Hz : constant Integer_32  := AVRAda_RTS_Config.Clock_Frequency;
+
     procedure Initialize (Baudrate : Integer_32)  is
 	BAUD : Unsigned_16; for BAUD'Address use MCU.USART0_BAUD_Address; pragma Volatile (BAUD);
     begin
@@ -11,8 +12,13 @@ package body AVR.UART is
 	MCU.PORTB_DIRCLR := MCU.Pin_3;
 
 	BAUD := Unsigned_16 ((Clock_Hz * 64) / (16 * Baudrate));
-	MCU.USART0_CTRLA := MCU.USART_RXCIE_Bm;
+--	MCU.USART0_CTRLA := MCU.USART_RXCIE_Bm;
 	MCU.USART0_CTRLB := MCU.USART_RXEN_Bm or MCU.USART_TXEN_Bm; 
+    end;
+
+    procedure Shutdown is
+    begin
+	null;
     end;
 
     procedure Put_Raw (Data : Unsigned_8) is

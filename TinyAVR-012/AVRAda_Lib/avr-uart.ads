@@ -5,6 +5,7 @@ package AVR.UART is
    pragma Preelaborate;
 
    procedure Initialize (Baudrate : Integer_32);
+   procedure Shutdown;
    procedure Put_Raw (Data : Unsigned_8);
    procedure Put (Ch : Character);
    procedure Put (S : AVR_String);
