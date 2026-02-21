@@ -9,10 +9,11 @@ package AVR.SPI.Master is
    procedure Startup
      (Clock_Divisor :     in      Clock_Divisor_Type;
       Clock_Mode :        in      Clock_Mode_Type;
-      Double_Clock :      in      Boolean := False;
+      Double_Clock :      in      Boolean := True;
       MSB_First :         in      Boolean := True    -- LSB or MSB First
      );
 
+   procedure Shutdown;
     procedure Write (Data: Unsigned_8);
     pragma Inline (Write);
     function Read_Write (Data : Unsigned_8) return Unsigned_8;

@@ -25,6 +25,11 @@ package body AVR.SPI.Master is
         MCU.SPI0_CTRLA := MCU.SPI0_CTRLA or MCU.SPI_ENABLE_Bm;
    end;
 
+  procedure Shutdown is
+  begin
+	MCU.SPI0_CTRLA := 0;
+  end;
+
    procedure Write (Data: Unsigned_8) is 
    begin
        MCU.SPI0_DATA := Data;
