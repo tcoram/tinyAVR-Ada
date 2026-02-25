@@ -3,6 +3,7 @@
 with AVR.MCU;
 with AVRAda_Rts_Config;
 with AVR.UART; use AVR.UART;
+
 package body AVR.I2C.Master is
     I2c_Count : Unsigned_16 := 0;
     Clock_Hz : constant Unsigned_32  := AVRAda_RTS_Config.Clock_Frequency;
@@ -10,7 +11,7 @@ package body AVR.I2C.Master is
     procedure Initialize (Frequency : Unsigned_32; T_Rise : Unsigned_32 := 300) is
 	Baud : Unsigned_32 := ((Clock_Hz/Frequency) - (((Clock_Hz * T_Rise)/1000)/1000)/1000 - 10)/2;
     begin
-	Put(Baud); New_Line;
+--	Put(Baud); New_Line;
 	-- PB1 -> SDA, PB0 -> SCL
 	MCU.PORTB_DIRCLR := MCU.Pin_1 or MCU.Pin_0;
 	MCU.PORTB_PIN0CTRL :=  MCU.PORT_PULLUPEN_Bm;
@@ -33,6 +34,7 @@ package body AVR.I2C.Master is
 	    MCU.TWI0_MCTRLB := MCU.TWI_MCMD_RECVTRANS_Gc; -- Ack
 	else
 	    MCU.TWI0_MCTRLB := MCU.TWI_ACKACT_NACK_Gc; -- Nak
+	    Stop;
 	end if;
 	return Data;
     end;
