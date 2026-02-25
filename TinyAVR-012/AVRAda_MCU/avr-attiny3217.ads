@@ -1,7 +1,9 @@
 with System; use System;
 with Interfaces; use Interfaces;
 package AVR.ATtiny3217 is
-	pragma Preelaborate;
+    pragma Preelaborate;
+    Have_lpm_rd_Zplus : constant Boolean               := True;
+
 	SIGNATURE_000	: constant Unsigned_8 := 16#1E#; -- 
 	SIGNATURE_001	: constant Unsigned_8 := 16#95#; -- 
 	SIGNATURE_002	: constant Unsigned_8 := 16#22#; -- 
